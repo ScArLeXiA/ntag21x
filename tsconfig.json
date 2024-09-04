@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig.json", "@tsconfig/node-lts/tsconfig.json"],
+  "exclude": ["./node_modules/**/*", "./dist/**/*", "./.eslintrc.cjs", "./.prettierrc.cjs"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  }
+}

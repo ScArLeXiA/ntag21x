@@ -37,11 +37,8 @@ console.log(icType)
 // WRITE command based on the detected IC type (e.g., page range)
 const cmd1 = new WriteCommand(icType)
 const res1 = await communicateNfc(
-  cmd1.build(
-    cmd1.userMemoryStartPage,
-    new Uint8Array([0x00, 0x00, 0x00, 0x00])
-  ),
-  cmd1.timeoutMs
+  cmd1.build(cmd1.userMemoryStartPage, new Uint8Array([0x00, 0x00, 0x00, 0x00])),
+  cmd1.timeoutMs,
 )
 cmd1.parse(res1)
 ```
